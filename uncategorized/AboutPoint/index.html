@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>关于这个站点的建设以及Butterfly主题的优化 | Radium·Stardust</title><meta name="description" content="前言：若应用后发生错误，请clone这个部分。这是Butterfly主题2020&#x2F;3&#x2F;30的版本（仅主题文件)，我顺便也帮忙集成了Aplayer和Live2d看板娘，最新版本的Butterfly貌似并不完全兼容，也不太打算更新。以后发布关于Butterfly主题优化的相关内容若无特殊情况，也是以这个版本为基准。注意！这些方案只确定对上述版本的Butterfly主题有用，其"><meta name="keywords" content="About_WebSite"><meta name="author" content="Radium-bit,radium_official@163.com"><meta name="copyright" content="Radium-bit"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/radium-bit/res@latest/avatar.webp"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="关于这个站点的建设以及Butterfly主题的优化"><meta name="twitter:description" content="前言：若应用后发生错误，请clone这个部分。这是Butterfly主题2020&#x2F;3&#x2F;30的版本（仅主题文件)，我顺便也帮忙集成了Aplayer和Live2d看板娘，最新版本的Butterfly貌似并不完全兼容，也不太打算更新。以后发布关于Butterfly主题优化的相关内容若无特殊情况，也是以这个版本为基准。注意！这些方案只确定对上述版本的Butterfly主题有用，其"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/radium-bit/res@latest/2233.webp"><meta property="og:type" content="article"><meta property="og:title" content="关于这个站点的建设以及Butterfly主题的优化"><meta property="og:url" content="http://radium-bit.gtihub.io/uncategorized/AboutPoint/"><meta property="og:site_name" content="Radium·Stardust"><meta property="og:description" content="前言：若应用后发生错误，请clone这个部分。这是Butterfly主题2020&#x2F;3&#x2F;30的版本（仅主题文件)，我顺便也帮忙集成了Aplayer和Live2d看板娘，最新版本的Butterfly貌似并不完全兼容，也不太打算更新。以后发布关于Butterfly主题优化的相关内容若无特殊情况，也是以这个版本为基准。注意！这些方案只确定对上述版本的Butterfly主题有用，其"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/radium-bit/res@latest/2233.webp"><meta property="article:published_time" content="2020-03-30T16:00:00.000Z"><meta property="article:modified_time" content="2020-05-23T15:03:49.883Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://radium-bit.gtihub.io/uncategorized/AboutPoint/"><link rel="prev" title="星尘调度" href="http://radium-bit.gtihub.io/uncategorized/CoolapkStardust/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"B,I,L,I","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: false  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="/css/icons.css"><meta name="generator" content="Hexo 4.2.1"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/radium-bit/res@latest/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文案</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw iconfont icon-CN_NetEasemusic"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/"><i class="fa-fw iconfont icon-bilibili-fill"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 类型</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友情链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 我？</span></a></div></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(https://cdn.jsdelivr.net/gh/radium-bit/res@latest/2233.webp)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Radium·Stardust</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文案</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw iconfont icon-CN_NetEasemusic"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/"><i class="fa-fw iconfont icon-bilibili-fill"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 类型</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友情链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 我？</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">关于这个站点的建设以及Butterfly主题的优化</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-03-31 00:00:00"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-03-31</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-05-23 23:03:49"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-05-23</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><div class="note danger">
+            <p>前言：若应用后发生错误，请clone<a href="https://github.com/Radium-bit/res/tree/master/Butterfly" target="_blank" rel="noopener">这个部分</a>。这是Butterfly主题2020/3/30的版本（<em>仅主题文件</em>)，我顺便也帮忙集成了Aplayer和Live2d看板娘，最新版本的Butterfly貌似并不完全兼容，也不太打算更新。<br>以后发布关于Butterfly主题优化的相关内容若无特殊情况，也是以这个版本为基准。<br><strong>注意！这些方案只确定对上述版本的Butterfly主题有用，其他的hexo主题不保证兼容</strong></p>
+          </div>
+<p>如果想要从头搭建，建议clone<a href="https://github.com/Radium-bit/res/tree/master/Butterfly_root" target="_blank" rel="noopener">这个部分</a>。然后直接覆盖到你的<strong>主题根目录</strong>下<br>设置过程也可以参阅<a href="https://jerryc.me/posts/4aa8abbe/" target="_blank" rel="noopener">JerryC的官方文档</a></p>
+<div class="note warning">
+            <p>如果你对这一切完全不熟悉，请先自学；否则可能会出现部分看不懂的情况。</p>
+          </div>
+
+<p>1.首先，您需要建立一个github账户。（如果已有Github则跳过这一步)</p>
+<p>2.创建一个新的项目，并且初始化ReadMe.md</p>
+<p>2.1 点击右上方你的头像，进入 Your repositories</p>
+<p><img src="https://cdn.jsdelivr.net/gh/radium-bit/res@latest/CtBl/gittest.png" alt=""></p>
+<p>2.2 点击New，在项目名称上写 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$YN</span>.github.io    <span class="comment">## 将$YN替换为你的GitHub名称，后续出现也当如此</span></span><br></pre></td></tr></table></figure>
+
+<p>然后打钩选项  （Initialize this repository with a README）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/radium-bit/res@latest/CtBl/startRM.png" alt=""></p>
+<p>最后点击 [Creat repositories]即可完成创建。</p>
+<p>当你看到你的仓库出现一个项目。名为$YN.github.io时，证明你已经完成了sever主机准备建设。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/radium-bit/res@latest/CtBl/Final_SV.png" alt="准备完成"></p>
+<p><em>至此，你已经完成了服务器的预备建设。尝试访问$YN.github.io吧。只要不是“未找到网页”这一类的就表示你已经成功了。</em></p>
+<blockquote>
+<p>3.接下来，部署请自行安装NodeJS，Git<br>可以输入以下命令确认</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v //检查node版本</span><br><span class="line">npm -v //检查npm版本</span><br><span class="line">git --version //检查git版本</span><br></pre></td></tr></table></figure>
+<p>然后，准备安装Hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-cli -g //安装Hexo</span><br><span class="line">hexo -v           //验证安装</span><br><span class="line">hexo init         //初始化Blog文件夹</span><br><span class="line">npm install       //安装基本组件</span><br></pre></td></tr></table></figure>
+<p>请根据下载的资源，决定复制到Blog的根目录，还是主题目录。<br><font color=#d31212 size=3 face="黑体">倘若是覆盖根目录，请覆盖后用命令行定位到主题根目录输入</font></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i</span><br></pre></td></tr></table></figure>
+<p>以安装依赖，确保后续步骤可以正常执行。</p>
+<blockquote>
+<p>3.1 预览、上传方式</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g    //生成页面</span><br><span class="line">hexo s   //打开本地服务器，进行预览和确认</span><br><span class="line">hexo d  //部署到GitHub Page</span><br></pre></td></tr></table></figure>
+<p>进入本机浏览器，访问localhost:4000即可访问你的页面  </p>
+<blockquote>
+<p>3.2调教主题</p>
+</blockquote>
+<div class="note warning">
+            <p>在这之前：请了解 <a href="https://www.cnblogs.com/zhsh666/p/11432956.html" target="_blank" rel="noopener">jsDelivr</a> 等CDN的使用方法。这里不做更多描述</p>
+          </div>
+
+<p>(1) 主题目录下_config.yml的配置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Radium·Stardust</span>   <span class="comment">#站点名</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">''</span>             <span class="comment">#子站点名</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">''</span>          <span class="comment">#为搜索引擎抓取而准备的关键标题区</span></span><br><span class="line"><span class="attr">keywords:</span>                <span class="comment">#为搜索引擎抓取而准备的关键词区</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Radium-bit</span>       <span class="comment">#网站作者名</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>          <span class="comment">#网站使用的语言，zh-CN为简体中文，zh-TW为繁体，en为默认英文</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">''</span>             <span class="comment">#网站使用时区，一般不必设置</span></span><br><span class="line"><span class="attr">email:</span> <span class="string">radium_official@163.com</span> <span class="comment">#网站的邮箱设置</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#aplayer相关设置</span></span><br><span class="line"><span class="attr">aplayer:</span> </span><br><span class="line">  <span class="attr">script_dir:</span> <span class="string">js</span>                      <span class="comment"># Public 目录下脚本目录路径，默认: 'assets/js'</span></span><br><span class="line">  <span class="attr">style_dir:</span> <span class="string">css</span>                         <span class="comment"># Public 目录下样式目录路径，默认: 'assets/css'</span></span><br><span class="line">  <span class="comment">#cdn: http://xxx/aplayer.min.js                # 引用 APlayer.js 外部 CDN 地址 (默认不开启)</span></span><br><span class="line">  <span class="comment">#style_cdn: http://xxx/aplayer.min.css         # 引用 APlayer.css 外部 CDN 地址 (默认不开启)</span></span><br><span class="line">  <span class="attr">meting:</span> <span class="literal">true</span>                                  <span class="comment"># MetingJS 支持</span></span><br><span class="line">  <span class="comment">#meting_api: http://xxx/api.php                # 自定义 Meting API 地址</span></span><br><span class="line">  <span class="comment">#meting_cdn: http://xxx/Meing.min.js           # 引用 Meting.js 外部 CDN 地址 (默认不开启)</span></span><br><span class="line">  <span class="attr">asset_inject:</span> <span class="literal">true</span>                            <span class="comment"># 自动插入 Aplayer.js 与 Meting.js 资源脚本, 默认开启</span></span><br><span class="line">  <span class="comment">#externalLink: http://xxx/aplayer.min.js       # 老版本参数，功能与参数 cdn 相同meting: true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##b站追番设置</span></span><br><span class="line"><span class="attr">bangumi:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否开启页面</span></span><br><span class="line">  <span class="attr">vmid:</span> <span class="number">445498147</span>  <span class="comment">#你的b站UID，请确认隐私设置已经开放</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">'追番列表'</span> <span class="comment">#追番页面的标题</span></span><br><span class="line">  <span class="attr">quote:</span> <span class="string">'生命不息，追番不止！'</span> <span class="comment">#你想说的话</span></span><br><span class="line">  <span class="attr">show:</span> <span class="number">1</span>           <span class="comment">#初始显示页面：0: 想看 , 1: 在看 , 2: 看过，默认为 1</span></span><br><span class="line">  <span class="attr">loading:</span> <span class="string">'/img/bangumi-loading.gif'</span></span><br></pre></td></tr></table></figure>
+<p>Butterfly.yml的相关设置请参考<a href="https://jerryc.me/posts/4aa8abbe/" target="_blank" rel="noopener">JerryC的开发文档</a>。</p>
+<hr>
+<p><font color=#0c74d6 size=5><strong><em>未完待续</em></strong></font><br><font size=1>封面来自互联网，如有侵权请<a href="mailto:radium_official@163.com">点击这里</a>联系我。</font></p>
+<hr>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:radium_official@163.com">Radium-bit</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://radium-bit.gtihub.io/uncategorized/AboutPoint/">http://radium-bit.gtihub.io/uncategorized/AboutPoint/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://radium-bit.gtihub.io" target="_blank">Radium·Stardust</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/About-WebSite/">About_WebSite</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/radium-bit/res@latest/post.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"/><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/uncategorized/CoolapkStardust/"><img class="prev_cover" src="https://cdn.jsdelivr.net/gh/radium-bit/res@latest/dd/FFylDD.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">星尘调度</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Radium-bit</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="ribbon_piao" mobile="false" src="/js/third-party/piao.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@3/instantpage.min.js" type="module"></script><script src="/js/third-party/ClickShowText.js"></script><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/radium-bit/res@master/live2d/autoload.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script></body></html>
