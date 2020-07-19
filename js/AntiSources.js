@@ -5,11 +5,11 @@
         window.event.returnValue = false; 
         return false; 
     } 
-    //如果用户在工具栏调起开发者工具，那么判断浏览器的可视高度和可视宽度是否有改变，如有改变则关闭本页面 
-    var h = window.innerHeight,w=window.innerWidth; 
-    window.onresize = function () { 
-        if (h!= window.innerHeight||w!=window.innerWidth){ 
-            window.close(); 
-            window.location = "about:blank"; 
-        } 
-    } 
+    //如果用户在工具栏调起开发者工具，那么判断浏览器的可视高度和可视宽度是否有改变，如有改变则关闭本页面 （因手机沉浸式原因废弃）
+    //var h = window.innerHeight,w=window.innerWidth; 
+   // window.onresize = function () { 
+       // if (h!= window.innerHeight||w!=window.innerWidth){ 
+       //     window.close(); 
+        //    window.location = "about:blank"; 
+        //} 
+//    } 
