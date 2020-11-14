@@ -2075,6 +2075,16 @@
 	overflow: hidden;
 	transition:all 0.5s;
 }
+.ly-imgbox81{
+	position: absolute;
+	bottom: 0;
+	width: 15%;
+	height: 10%;
+	border-radius: 8px;
+	opacity:0;
+	overflow: hidden;
+	transition:all 0.5s;
+}
 .active .ly-imgbox93{
 	opacity:1;
 	transition-delay:12.5s;
